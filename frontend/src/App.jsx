@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import LearningPath from './pages/LearningPath';
+import KnowledgeGap from './pages/KnowledgeGap'; // <-- Add this import
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <div className="space-x-6">
               <Link to="/" className="text-gray-300 hover:text-white transition-colors">Dashboard</Link>
               <Link to="/learning-path" className="text-gray-300 hover:text-white transition-colors">Learning Path</Link>
+              <Link to="/knowledge-gap" className="text-gray-300 hover:text-white transition-colors">Knowledge Gap</Link> {/* <-- Add this link */}
             </div>
           </div>
         </nav>
@@ -24,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/learning-path" element={<LearningPath />} />
+            <Route path="/knowledge-gap" element={<KnowledgeGap />} /> {/* <-- Add this route */}
           </Routes>
         </div>
 
