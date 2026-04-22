@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import LearningPath from './pages/LearningPath';
@@ -28,6 +29,7 @@ function App() {
         <div className="p-4">
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<Dashboard />} />
             <Route path="/learning-path" element={<LearningPath />} />
             <Route path="/knowledge-gap" element={<KnowledgeGap />} />
