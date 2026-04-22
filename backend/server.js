@@ -16,18 +16,22 @@ const database = mongoose.connection;
 database.on('error', (error) => console.log('Database Error:', error));
 database.once('connected', () => console.log('✅ Cloud Database Connected Successfully'));
 
-// ------------------------------------
 // IMPORT TEAM ROUTES
-// ------------------------------------
 const topicRoutes = require('./routes/topics');
 // const learningPathRoutes = require('./routes/learningPath'); // <-- Yousef will uncomment this later!
+
+// 👉 YOUR NEW AUTH ROUTE IMPORT
+const authRoutes = require('./routes/auth'); 
 
 // Mount the routes
 app.use('/api/topics', topicRoutes);
 // app.use('/api/learning-path', learningPathRoutes); // <-- Yousef will uncomment this later!
 
-// Start the server (Fixed the duplicate bug)
+// 👉 YOUR NEW AUTH ROUTE MOUNT
+app.use('/api/auth', authRoutes); 
+
+// Start the server
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
-  console.log(`Server Started on port ${PORT}`);
+    console.log(`Server Started on port ${PORT}`);
 });
