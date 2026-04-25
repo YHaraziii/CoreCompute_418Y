@@ -32,9 +32,9 @@ router.get('/seed', async (req, res) => {
   try {
     const initialTopics = [
       { name: 'Data Structures', status: 'Mastered' },
-      { name: 'Algorithms', status: 'In-Progress' },
-      { name: 'Operating Systems', status: 'Started' },
-      { name: 'Database Systems', status: 'In-Progress' },
+      { name: 'Algorithms', status: 'Mastered' },
+      { name: 'Operating Systems', status: 'In-Progress' },
+      { name: 'Database Systems', status: 'Mastered' },
       { name: 'Computer Networks', status: 'Started' },
       { name: 'Discrete Mathematics', status: 'Mastered' },
     ];

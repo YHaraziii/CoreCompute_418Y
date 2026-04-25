@@ -26,6 +26,10 @@ const topicRoutes = require('./routes/topics');
 app.use('/api/topics', topicRoutes);
 // app.use('/api/learning-path', learningPathRoutes); // <-- Yousef will uncomment this later!
 
+const knowledgeGapRoutes = require('./routes/knowledgeGap');
+
+app.use('/api/knowledge-gap', knowledgeGapRoutes);
+
 // Start the server (Fixed the duplicate bug)
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
